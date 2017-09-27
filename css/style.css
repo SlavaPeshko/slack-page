@@ -1,0 +1,37 @@
+.main-container{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.main-channel{
+    float: left;
+    background: #333333;
+    width: 65px;
+    height: 100%;
+}
+
+.channel-image{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.channel-text{
+    color: #949494;
+    size: 1px;
+}
+
+.main-contact-flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    float: left;
+    background: #646464;
+    width: 180px;
+    height: 100%;
+}
+
+.name-company-flex-block{
+    align-items: baseline;
+    background: red;
+}
