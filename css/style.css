@@ -6,15 +6,144 @@
 body{
     height: 100vh;
 }
+
+p{
+	font-family: 'Lato', sans-serif;
+}
 .wrapper{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: stretch;
     height: 100%;
 }
 
+/*Start Channel-panel*/
+.wrapper-channel{
+    background: rgb(40, 42, 41);
+    flex-grow: 0;
+    flex-basis: 75px;
+    display:  flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.channel-items{
+    margin-top: 15px;
+    align-self: center;
+
+}
+
+.channel-items>img{
+    height: 45px;
+    width: 45px;
+    border-radius: 5px;
+}
+
+.channel-items>p{
+    text-align: center;
+    color: #B8B8B8;
+}
+/*End Channel-panel*/
+
+/* Start contact-panel */
+.wrapper-contact{
+    flex-grow: 0;
+    flex-basis: 225px;
+    background: rgb(77, 57, 75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.head-contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.head-contact-left span{
+    font-size: 15px;
+    margin-top: 5px;
+    color: #B8B8B8;
+}
+
+.head-contact-left .fa-large{
+    font-size: 12px;
+    margin-right: 2px;
+    color: green;
+}
+
+.head-contact:hover{
+    opacity: 0.2;
+}
+
+.contacts{
+    color: #B8B8B8;
+    list-style-type: none;
+}
+
+.contacts>p{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #B8B8B8;
+}
+
+.contacts>p>i{
+    float: right;
+    font-size: 20px;
+}
+
+.contacts>li{
+    font-size: 18px;
+    color: #B8B8B8;
+}
+
+.contacts>li>i{
+    margin: 5px 5px 0 15px;
+    font-size: 10px;
+}
+
+ul.contacts li:hover{
+    background: rgb(76, 150, 137);
+    cursor: pointer;
+}
+
+ul.contacts p:hover{
+    color: white;
+    cursor: pointer;
+}
+
+
+.contact-search{
+    margin-bottom: 15px;
+    align-self: center;
+    color: #B8B8B8;
+}
+
+.contact-search i:hover{
+    cursor: pointer;
+    color: white;
+}
+
+/* End contact-panel */
+
+
+
+
+
+
+
+.wrapper-message{
+    background: #919191;
+    flex-grow: 2;
+}
+
+/* ------------------------------ */
 /* Channel left panel */
-.channel-flex-container{
+/* .channel-flex-container{
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -35,10 +164,10 @@ body{
 .channel-flex-elements>p{
     text-align: center;
     color: #B8B8B8;
-}
+} */
 
 /* Contacts panel */
-.contact-flex-container{
+/* .contact-flex-container{
     display: flex;
     flex-direction: column;
     flex-grow: 0;
@@ -313,7 +442,7 @@ ul.contact-channels p:hover{
 .channel-pinned .item-3:hover{
     cursor: pointer;
     opacity: 0.8;
-}
+} */
 
 
 
