@@ -7,7 +7,7 @@ body{
     height: 100vh;
 }
 
-p{
+p,li{
 	font-family: 'Lato', sans-serif;
 }
 .wrapper{
@@ -63,25 +63,53 @@ p{
     padding: 15px;
 }
 
+.head-contact-left>h3{
+    color: white;
+}
+
+.head-contact .fa.fa-bell-o{
+    color: #B8B8B8;
+}
+
+.head-contact:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.fa.fa-bell-o:hover{
+    color: white;
+}
+
 .head-contact-left span{
     font-size: 15px;
     margin-top: 5px;
     color: #B8B8B8;
 }
 
-.head-contact-left .fa-large{
+.head-contact-left {
     font-size: 12px;
     margin-right: 2px;
-    color: green;
 }
 
-.head-contact:hover{
-    opacity: 0.2;
+.all-threads{
+    padding-left: 15px;
+    color: #B8B8B8;
+    margin-bottom: 15px;
+}
+
+.fa-commenting-o{
+    margin-right: 2px;
+}
+
+.all-threads:hover{
+    background: rgb(97, 97, 97);
+    cursor: pointer;
 }
 
 .contacts{
     color: #B8B8B8;
     list-style-type: none;
+    margin-bottom: 15px;
 }
 
 .contacts>p{
@@ -94,6 +122,7 @@ p{
 .contacts>p>i{
     float: right;
     font-size: 20px;
+    line-height: 1.4;
 }
 
 .contacts>li{
@@ -107,13 +136,17 @@ p{
 }
 
 ul.contacts li:hover{
-    background: rgb(76, 150, 137);
+    background: rgb(97, 97, 97);
     cursor: pointer;
 }
 
 ul.contacts p:hover{
     color: white;
     cursor: pointer;
+}
+
+.fa-heart, .fa-circle{
+    color: green;
 }
 
 
@@ -137,9 +170,122 @@ ul.contacts p:hover{
 
 
 .wrapper-message{
-    background: #919191;
     flex-grow: 2;
+    display: flex;
+    flex-direction: column;
 }
+
+.hat-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid #cfcece;
+}
+
+.left-items{
+    color:#B8B8B8
+}
+
+.left-items .name-room{
+    font-size: 20px;
+    font-weight: bold; 
+    color: black;
+}
+
+.tools{
+    font-size: 13px;
+}
+
+.fa-star-o{
+    margin-right: 5px;
+}
+
+.fa-user-o, .fa-thumb-tack{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.topic{
+    margin-left: 5px;
+}
+
+.count{
+    margin-left: 5px;
+}
+
+
+/* .tools .fa-star-o, .fa-user-o, .fa-thumb-tack, .topic{
+    margin-right: 10px
+} */
+
+.tools .fa-thumb-tack:hover, .fa-user-o:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.right-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    font-size: 1.5em;
+    color: #B8B8B8;
+}
+
+.right-items>div{
+    padding: 5px;
+}
+
+.right-items search{
+    padding: 5px 5px;
+    width: 360px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.fa-cog:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.hat-circle{
+    color:#777777;
+    background-color: #d8d8d8;
+    border-radius: 5px;
+}
+
+.fa-info-circle:hover{
+    cursor: pointer;
+}
+
+.fa-at:hover{
+    color: red;
+    cursor: pointer;    
+}
+
+.fa-star-o:hover{
+    color: yellow;
+    cursor: pointer;   
+}
+
+.fa-ellipsis-v:hover{
+    color:blue;
+    cursor: pointer;
+}
+
+.fa-phone:hover{
+    color:blue;
+    cursor: pointer;
+}
+
+.message-container{
+    background: green;
+    height: 100%;
+}
+
+
 
 /* ------------------------------ */
 /* Channel left panel */
@@ -329,7 +475,6 @@ ul.contact-channels p:hover{
     display: flex;
     flex-direction: row;
     height: 100%;
-
 }
 
 .main-message{
