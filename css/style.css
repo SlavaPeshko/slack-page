@@ -162,13 +162,7 @@ ul.contacts p:hover{
 }
 
 /* End contact-panel */
-
-
-
-
-
-
-
+/* Start message panel */
 .wrapper-message{
     flex-grow: 2;
     display: flex;
@@ -176,7 +170,7 @@ ul.contacts p:hover{
 }
 
 .hat-container{
-    padding: 10px;
+    padding: 7px 7px 10px 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -189,9 +183,10 @@ ul.contacts p:hover{
 }
 
 .left-items .name-room{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold; 
     color: black;
+    margin-bottom: 5px;
 }
 
 .tools{
@@ -199,26 +194,34 @@ ul.contacts p:hover{
 }
 
 .fa-star-o{
-    margin-right: 5px;
+    margin-right: 7px;
 }
 
 .fa-user-o, .fa-thumb-tack{
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 7px;
+    margin-right: 7px;
 }
 
 .topic{
-    margin-left: 5px;
+    padding: 4px;
 }
 
-.count{
-    margin-left: 5px;
+tools .count{
+    margin-left: 7px;
 }
 
+.tools .topic:hover{
+    border-color: #717274;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid;
+}
 
-/* .tools .fa-star-o, .fa-user-o, .fa-thumb-tack, .topic{
-    margin-right: 10px
-} */
+.tools .edit-topic:hover{
+    visibility: visible;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 .tools .fa-thumb-tack:hover, .fa-user-o:hover{
     color: blue;
@@ -229,8 +232,7 @@ ul.contacts p:hover{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: baseline;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #B8B8B8;
 }
 
@@ -238,11 +240,20 @@ ul.contacts p:hover{
     padding: 5px;
 }
 
-.right-items search{
-    padding: 5px 5px;
-    width: 360px;
-    height: 20px;
+.right-items>form i.fa-search{
+    position: absolute;
+    padding: 5px;
+}
+
+.right-items input{
+    border: 1px solid gray;
     border-radius: 5px;
+    padding: 8px 60px;
+    padding-left: 30px;
+}
+
+.right-items input:focus{
+    width: 320px;
 }
 
 .fa-cog:hover{
@@ -281,252 +292,75 @@ ul.contacts p:hover{
 }
 
 .message-container{
-    background: green;
     height: 100%;
-}
-
-
-
-/* ------------------------------ */
-/* Channel left panel */
-/* .channel-flex-container{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background: rgb(40, 42, 41);
-    justify-content: flex-start;
-    align-items: center;
-    flex-grow: 0;
-    flex-basis: 75px;
-}
-.channel-flex-elements{
-    margin: 10px 0;
-}
-
-.channel-flex-elements>img{
-    height: 45px;
-    width: 45px;
-}
-.channel-flex-elements>p{
-    text-align: center;
-    color: #B8B8B8;
-} */
-
-/* Contacts panel */
-/* .contact-flex-container{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0;
-    flex-basis: 250px;
-    height: 100%;
-    background: rgb(77, 57, 75);
-}
-
-.contact-notifications{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin:  10px 10px 0 10px;
-}
-
-.contact-notifications p.name{
-    font-size: 18px;
-    color: white;
-}
-
-.contact-notifications p.user{
-    font-size: 13px;
-    margin-top: 5px;
-    color: #B8B8B8;
-}
-
-.contact-channels{
-    margin-top: 25px;
-    color: #B8B8B8;
-    list-style-type: none;
-}
-
-.contact-channels>p{
-    margin-left: 15px;
-    margin-right: 10px;
-    font-size: 18px;
-    color: #B8B8B8;
-}
-
-.contact-channels>p>i{
-    float: right;
-    font-size: 20px;
-}
-
-.contact-channels>li{
-    font-size: 18px;
-    color: #B8B8B8;
-}
-
-.contact-channels>li>i{
-    margin: 5px 5px 0 15px;
-    font-size: 10px;
-}
-
-ul.contact-channels  li:hover{
-    background: rgb(76, 150, 137);
-    cursor: pointer;
-}
-
-ul.contact-channels p:hover{
-    color: white;
-    cursor: pointer;
-}
-
-.contact-search{
-    align-self: center;
-    flex: auto;
-    margin-top: 460px;
-    color: #B8B8B8;
-}
-
-.contact-search i:hover{
-    cursor: pointer;
-    color: white;
-}
-
-.flex-container{
-    background: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 4;
-}
-
-.head-flex-container{
-    height: 80px;
-    background: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.left-flex-container{
-    height: 10px;
-    width: 10px;
-    background: yellow;
-}
-
-.right-flex-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: baseline;
-    font-size: 1.5em;
-    color: #B8B8B8;
-}
-
-.right-flex-container>div{
-    padding: 5px;
-}
-
-.right-flex-container input{
-    padding: 5px 5px;
-    width: 360px;
-    height: 20px;
-    border-radius: 5px;
-}
-
-.fa-cog:hover{
-    color: blue;
-    cursor: pointer;
-}
-
-.head-circle{
-    color:#777777;
-    background-color: #d8d8d8;
-    border-radius: 5px;
-}
-
-.fa-info-circle:hover{
-    cursor: pointer;
-}
-
-.fa-at:hover{
-    color: red;
-    cursor: pointer;    
-}
-
-.fa-star-o:hover{
-    color: yellow;
-    cursor: pointer;   
-}
-
-.fa-ellipsis-v:hover{
-    color:blue;
-    cursor: pointer;
-}
-
-.fa-phone:hover{
-    color:blue;
-    cursor: pointer;
-}
-
-
-
-
-
-.message-flex-container{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
 }
 
 .main-message{
-    background: white;
     flex-grow: 2;
     border-right: 0.5px solid #cfcece;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
 }
-.message-window{
-    width: 100%;
-    flex-basis: 250px;
-    border-top: 0.5px solid #cfcece;
+
+.msg-container{
+    padding: 2px;
+    bottom: 80px;
+    color: green;
+}
+
+.intput-container{
+    width: 99%;
+    height: 40px;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.intput-container .input-msg{
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+form.input-container .input-msg{
+    padding: 10px 5px;
+    padding-right: 750px;
+    border: 2px solid gray;
+    border-radius: 4px 4px 4px 4px;
+}
+
+
+
+
+.details-panel{
+    flex-grow: 0.3;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
 }
-
-.photo-user-message{
-    font-size: 15px;
-    flex-grow: 1;
-}
-.text-message{
-    font-size: 15px;
-}
-
-
 
 .pinned{
     background: white;
-    flex-grow: 0.5;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
 .about{
-    height: 80px;
+    height: 60px;
     border-bottom: 0.5px solid #cfcece;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #E7E7E7;
-    border-top: 0.5px solid #cfcece; 
+    background: #E7E7E7; 
 }
 
 .about .left{
     margin: 5px 5px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .about .right{
@@ -539,12 +373,12 @@ ul.contact-channels p:hover{
 }
 
 .pinned .channel{
-    height: 80px;
+    height: 60px;
     border-bottom: 0.5px solid #cfcece;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .channel .item-1{
@@ -565,15 +399,11 @@ ul.contact-channels p:hover{
 }
 
 .pinned .channel-pinned{
-    height: 80px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 20px;
-}
-
-.channel-pinned .item-1{
-    margin: 5px 5px;
+    font-size: 18px;
 }
 
 .channel-pinned .item-2{
@@ -587,7 +417,10 @@ ul.contact-channels p:hover{
 .channel-pinned .item-3:hover{
     cursor: pointer;
     opacity: 0.8;
-} */
+}
+
+
+
 
 
 
