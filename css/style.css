@@ -26,6 +26,7 @@ p,li{
     display:  flex;
     flex-direction: column;
     justify-content: flex-start;
+    min-width: 70px;
 }
 
 .channel-items{
@@ -44,6 +45,10 @@ p,li{
     text-align: center;
     color: #B8B8B8;
 }
+
+.channel-items:hover{
+    cursor: pointer;
+}
 /*End Channel-panel*/
 
 /* Start contact-panel */
@@ -54,6 +59,7 @@ p,li{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 220px;
 }
 
 .head-contact{
@@ -63,7 +69,8 @@ p,li{
     padding: 15px;
 }
 
-.head-contact-left>h3{
+.head-contact-left>p{
+    font-size: 15px;
     color: white;
 }
 
@@ -74,6 +81,7 @@ p,li{
 .head-contact:hover{
     opacity: 1;
     cursor: pointer;
+    background: #434745;
 }
 
 .fa.fa-bell-o:hover{
@@ -82,7 +90,7 @@ p,li{
 
 .head-contact-left span{
     font-size: 15px;
-    margin-top: 5px;
+    margin-left: 2px;
     color: #B8B8B8;
 }
 
@@ -92,9 +100,9 @@ p,li{
 }
 
 .all-threads{
-    padding-left: 15px;
+    padding: 5px 15px 10px;
     color: #B8B8B8;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .fa-commenting-o{
@@ -109,7 +117,7 @@ p,li{
 .contacts{
     color: #B8B8B8;
     list-style-type: none;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .contacts>p{
@@ -128,6 +136,8 @@ p,li{
 .contacts>li{
     font-size: 18px;
     color: #B8B8B8;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
 }
 
 .contacts>li>i{
@@ -187,6 +197,10 @@ ul.contacts p:hover{
     font-weight: bold; 
     color: black;
     margin-bottom: 5px;
+}
+
+.left-items .name-room:hover{
+    cursor: pointer;
 }
 
 .tools{
@@ -299,37 +313,148 @@ tools .count{
 
 .main-message{
     flex-grow: 2;
-    border-right: 0.5px solid #cfcece;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
+    position: relative;
 }
 
 .msg-container{
-    padding: 2px;
-    bottom: 80px;
-    color: green;
+    overflow-y: auto;
+    height: 95%;
 }
 
+.date{
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+}
+
+.line{
+    display: inline-block;
+    width: 50%;
+    border: 0.5px solid lightgray;
+    margin: auto;
+}
+
+.message .msg-head{
+    font-weight: bold;
+}
+
+.main-message .dateName{
+    flex-shrink: 0;
+    font-size: 17px;
+    padding: 0 10px;
+}
+
+.message .date-time {
+    color: #717274;
+    font-size: 12px;
+    white-space: nowrap;
+    font-weight: 300;
+}
+
+.main-message .message {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 15px;
+    cursor: pointer;
+}
+
+.main-message .user-photo>img{
+    width: 35px;
+    height: 35px;
+}
+
+.message .msg-content {
+    padding: 0 5px;
+    font-family: Slack-Lato, sans-serif;
+    color: #2c2d30;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+
+
+
+
+
+
+
+
+
 .intput-container{
-    width: 99%;
-    height: 40px;
+    width: 90%;
+    height: 45px;
     outline: none;
     display: flex;
-    flex-direction: row;
+    margin: 0 0 10px 10px;
+    max-width: 50vw;
 }
 
 .intput-container .input-msg{
     border: 2px solid gray;
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0;
+    width: 99%;
+    padding: 10px 10px;
+    padding-right: 75px;
+    outline: none;
+    overflow: auto;
+}
+
+.msg-attach{
+    background: inherit;
+    border: 2px solid gray;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    width: 42px;
+    color: grey;
+}
+
+.msg-attach:hover{
+    background: green;
+    color: white;
+    cursor: pointer;
 }
 
 form.input-container .input-msg{
     padding: 10px 5px;
-    padding-right: 750px;
+    padding-right: 75px;
     border: 2px solid gray;
     border-radius: 4px 4px 4px 4px;
+}
+
+form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before {
+    content: attr(data-ph);
+    color: gray;
+}
+
+.intput-container a{
+    position: relative;
+    font-size: 1.3em;
+    color: gray;
+}
+
+.msg-at{
+    right: 70px;
+    top: 10px;
+} 
+
+.msg-smile{
+    right: 60px;
+    top: 10px;
+}
+
+.intput-container .msg-at .fa-at:hover{
+    color: blue;
+}
+
+.intput-container .msg-smile .fa-smile-o:hover{
+    color: yellow;
+    cursor: pointer;
 }
 
 
@@ -340,6 +465,8 @@ form.input-container .input-msg{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    min-width: 340px;
+    border-left: 1px solid #cfcece;
 }
 
 .pinned{
