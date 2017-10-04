@@ -265,6 +265,7 @@ tools .count{
     border-radius: 5px;
     padding: 8px 115px;
     padding-left: 30px;
+    outline: none;
 }
 
 .right-items input:focus{
@@ -472,7 +473,6 @@ form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before 
 
 .about{
     height: 70px;
-    border-bottom: 0.5px solid #cfcece;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -543,7 +543,7 @@ form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before 
 
 .channel-details{
     padding: 25px 10px 15px 15px;
-    border-bottom: 0.5px solid #cfcece;
+    border-top: 0.5px solid #cfcece;
     height: 70px;
     box-sizing: border-box;
 }
@@ -552,6 +552,68 @@ form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before 
     opacity: 1;
     cursor: pointer;
 }
+
+.channel-details .fa-thumb-tack{
+    color: orange;
+}
+
+.channel-details .fa-star-o{
+    color: blue;
+}
+
+.pinned-items {
+    border: 1px solid #cfcece;
+    margin: 20px 10px 0px 0px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pinned-items .items{
+    margin: 10px 10px 10px 10px;
+}
+
+.pinned-items .msg-body {
+    padding: 0 5px;
+    font-family: Slack-Lato, sans-serif;
+    color: #2c2d30;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.pinned-items .msg-head{
+    font-weight: bold;
+    font-family: Slack-Lato, sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 5px;
+}
+
+.pinned-items .date-time {
+    color: #717274;
+    font-size: 12px;
+    white-space: nowrap;
+    font-weight: 300;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.items .fa-times{
+    font-size: 0.6em;
+    position: absolute;
+    right: 35px;
+    color: #cfcece;
+    visibility: hidden;
+}
+
+
+.items i.fa-times:hover {
+    color: black;
+}
+
+.items:hover i.fa-times {
+    visibility: visible;
+}
+
 
 
 
