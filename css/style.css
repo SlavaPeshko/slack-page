@@ -10,6 +10,7 @@ body{
 p,li{
 	font-family: 'Lato', sans-serif;
 }
+
 .wrapper{
     display: flex;
     flex-direction: row;
@@ -32,7 +33,6 @@ p,li{
 .channel-items{
     margin-top: 15px;
     align-self: center;
-
 }
 
 .channel-items>img{
@@ -69,9 +69,16 @@ p,li{
     padding: 15px;
 }
 
-.head-contact-left>p{
-    font-size: 15px;
+.head-contact .name-company{
+    font-size: 18px;
+    font-weight: bold;
     color: white;
+    margin-right: 8px; 
+}
+
+.head-contact .fa-angle-down{
+    font-size: 1.3em;
+    color: #B8B8B8;
 }
 
 .head-contact .fa.fa-bell-o{
@@ -86,6 +93,7 @@ p,li{
 
 .fa.fa-bell-o:hover{
     color: white;
+    transition-duration: 0.5s;
 }
 
 .head-contact-left span{
@@ -121,6 +129,7 @@ p,li{
 }
 
 .contacts>p{
+    margin-bottom: 5px;
     margin-left: 15px;
     margin-right: 10px;
     font-size: 18px;
@@ -131,12 +140,13 @@ p,li{
     float: right;
     font-size: 20px;
     line-height: 1.4;
+    margin-right: 5px;
 }
 
 .contacts>li{
     font-size: 18px;
     color: #B8B8B8;
-    padding-top: 2.5px;
+    padding-top: 1px;
     padding-bottom: 2.5px;
 }
 
@@ -150,15 +160,21 @@ ul.contacts li:hover{
     cursor: pointer;
 }
 
-ul.contacts p:hover{
+ul.contacts p>i:hover{
     color: white;
     cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+ul.contacts p>span:hover{
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 .fa-heart, .fa-circle{
     color: green;
 }
-
 
 .contact-search{
     margin-bottom: 15px;
@@ -178,9 +194,12 @@ ul.contacts p:hover{
     display: flex;
     flex-direction: column;
     width: 100%;  
+    min-width: 900px;
 }
 
 .hat-container{
+    box-sizing: border-box;
+    height: 7%;
     padding: 7px 7px 10px 15px;
     display: flex;
     flex-direction: row;
@@ -213,29 +232,42 @@ ul.contacts p:hover{
 }
 
 .fa-user-o, .fa-thumb-tack{
-    /* margin-left: 7px;
-    margin-right: 7px; */
+    margin-left: 7px;
+    margin-right: 7px;
 }
 
 .topic{
     padding: 4px;
 }
 
-tools .count{
-    margin-left: 7px;
+.tools .count{
+    margin-left: 5px;
 }
+
+.tools .edit{
+    visibility: hidden;
+    padding-left: 5px;
+    color: blue;
+    text-decoration: none;
+}
+
+.tools .topic:hover+.edit{
+    visibility: visible;
+}
+
+.tools .edit:hover{
+    visibility: visible;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
 
 .tools .topic:hover{
     border-color: #717274;
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid;
-}
-
-.tools .edit-topic:hover{
-    visibility: visible;
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 .tools .fa-thumb-tack:hover, .fa-user-o:hover{
@@ -303,14 +335,14 @@ tools .count{
 }
 
 .fa-phone:hover{
-    color:blue;
     cursor: pointer;
 }
 
 .message-container{
-    height: 100%;
+    height: 93%;
     display: flex;
     flex-direction: row;
+    box-sizing: border-box;
 }
 
 .main-message{
@@ -363,7 +395,6 @@ tools .count{
     display: flex;
     justify-content: flex-start;
     padding: 20px 15px;
-    cursor: pointer;
 }
 
 .main-message .user-photo>img{
@@ -383,15 +414,22 @@ tools .count{
     background: #F9F9F9;
 }
 
+.msg-head .name:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .intput-container{
     width: 99%;
     outline: none;
     display: flex;
-    margin: 0 0 10px 10px;
+    margin: 10px 0 10px 10px;
     min-height: 45px;
+    word-break: break-all;
 }
 
 .intput-container .input-msg{
+    max-height: 100px;
     border: 2px solid gray;
     border-radius: 0 5px 5px 0;
     width: 99%;
@@ -399,7 +437,6 @@ tools .count{
     padding-right: 75px;
     outline: none;
     overflow: auto;
-    max-height: 150px;
 }
 
 .msg-attach{
@@ -462,6 +499,7 @@ form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before 
     min-width: 400px;
     border-left: 1px solid #cfcece;
     font-size: 20px;
+    overflow: auto;
 }
 
 .pinned{
@@ -605,6 +643,18 @@ form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before 
     visibility: hidden;
 }
 
+/* .items .msg-head:hover{
+    text-decoration: underline;
+} */
+
+.items .date-time:hover{
+    text-decoration: underline;
+}
+
+.items .name:hover{
+    text-decoration: underline;
+}
+
 
 .items i.fa-times:hover {
     color: black;
@@ -615,5 +665,59 @@ form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before 
 }
 
 
+.pinned-items-1 {
+    border: 1px solid #cfcece;
+    margin: 20px 10px 0px 0px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pinned-items-1 .items{
+    margin: 10px 10px 10px 10px;
+}
+
+.pinned-items-1 .msg-body {
+    padding: 0 5px;
+    font-family: Slack-Lato, sans-serif;
+    color: #2c2d30;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.pinned-items-1 .msg-head{
+    font-weight: bold;
+    font-family: Slack-Lato, sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 5px;
+}
+
+.pinned-items-1 .date-time {
+    color: #717274;
+    font-size: 12px;
+    white-space: nowrap;
+    font-weight: 300;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.items-1 .date-time:hover{
+    text-decoration: underline;
+}
+
+.items-1 .name:hover{
+    text-decoration: underline;
+}
+
+.msg-body>p>a{
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    color: blue;
+}
+
+.msg-body>p>a:hover{
+    text-decoration: underline;
+}
 
 
