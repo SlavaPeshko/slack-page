@@ -60,6 +60,7 @@ p,li{
     flex-direction: column;
     justify-content: space-between;
     min-width: 220px;
+    height: 100%;
 }
 
 .head-contact{
@@ -122,10 +123,15 @@ p,li{
     cursor: pointer;
 }
 
+.main-contacts{
+    height: 100%;
+    overflow-y:auto; 
+}
+
 .contacts{
     color: #B8B8B8;
     list-style-type: none;
-    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .contacts>p{
@@ -231,9 +237,9 @@ ul.contacts p>span:hover{
     margin-right: 7px;
 }
 
-.fa-user-o, .fa-thumb-tack{
-    margin-left: 7px;
+.tools .fa-user-o, .fa-thumb-tack{
     margin-right: 7px;
+    margin-left: 7px;
 }
 
 .topic{
@@ -571,12 +577,32 @@ form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before 
 }
 
 .channel-details summary {
-    display: flex;
+    /* display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     outline: none;
     opacity: 0.6;
+}
+
+/* Close element */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary{
+    display: block;
+} 
+
+summary::before {
+    float: right;
+    font-size: 13px;
+    content: '\25B6';
+    padding-right: 0.5em;
+  }
+
+details[open] > summary::before {
+    content: '\25BC';
 }
 
 .channel-details{
@@ -584,7 +610,7 @@ form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before 
     border-top: 0.5px solid #cfcece;
     height: 70px;
     box-sizing: border-box;
-}
+} 
 
 .details-panel summary:hover{
     opacity: 1;
@@ -593,10 +619,14 @@ form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before 
 
 .channel-details .fa-thumb-tack{
     color: orange;
+    margin-left: 0;
+    margin-right: 2px;
 }
 
 .channel-details .fa-star-o{
     color: blue;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .pinned-items {
@@ -721,3 +751,21 @@ form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before 
 }
 
 
+
+
+/* summary:after {
+    background: red;
+    border-radius: 5px;
+    content: "+";
+    color: #fff;
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: -5px 10px 0 0;
+    padding: 0;
+    text-align: center;
+    width: 20px;
+}
+details[open] summary:after {
+    content: "-";
+} */
