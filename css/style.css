@@ -114,7 +114,7 @@ p,li{
     margin-bottom: 25px;
 }
 
-.fa-commenting-o{
+.all-threads .fa-commenting-o{
     margin-right: 2px;
 }
 
@@ -193,6 +193,10 @@ ul.contacts p>span:hover{
     color: white;
 }
 
+.contact-search:focus{
+    color: red;
+}
+
 /* End contact-panel */
 /* Start message panel */
 .wrapper-message{
@@ -233,8 +237,175 @@ ul.contacts p>span:hover{
     font-size: 13px;
 }
 
-.fa-star-o{
+.tools .fa-star-o{
     margin-right: 7px;
+    position: relative;
+}
+
+.tools .fa-user-o{
+    position: relative;
+}
+
+.tools .fa-thumb-tack{
+    position: relative;
+}
+
+.tools .fa-user-o:hover .tooltip {
+    transition-delay: 0.2s;
+    visibility: visible;
+}
+
+.tools .fa-star-o:hover .tooltip {
+    transition-delay: 0.2s;
+    visibility: visible;
+}
+
+.tools .fa-thumb-tack:hover .tooltip {
+    transition-delay: 0.2s;
+    visibility: visible;
+}
+
+.right-items .fa-phone{
+    position: relative;
+}
+
+.right-items .fa-phone:hover .tooltip{
+    transition-delay: 0.2s;
+    visibility: visible;
+}
+
+.right-items .fa-info-circle{
+    position: relative;
+}
+
+.right-items .fa-info-circle:hover .tooltip{
+    transition-delay: 0.2s;
+    visibility: visible;
+}
+
+.right-items .fa-cog{
+    position: relative;
+}
+
+.right-items .fa-cog:hover .tooltip{
+    transition-delay: 0.2s;
+    visibility: visible;
+}
+
+.right-items .fa-at{
+    position: relative;
+}
+
+.right-items .fa-at:hover .tooltip{
+    transition-delay: 0.2s;
+    visibility: visible;
+}
+
+.right-items .fa-star-o .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.right-items .fa-star-o  .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: 25px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.right-items .fa-star-o{
+    position: relative;
+}
+
+.right-items .fa-star-o:hover .tooltip{
+    transition-delay: 0.2s;
+    visibility: visible;
+}
+
+.right-items .fa-ellipsis-v .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -110px;
+}
+
+.right-items .fa-ellipsis-v .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: 35px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.right-items .fa-ellipsis-v{
+    position: relative;
+}
+
+.right-items .fa-ellipsis-v:hover .tooltip{
+    transition-delay: 0.2s;
+    visibility: visible;
+}
+
+
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
 }
 
 .tools .fa-user-o, .fa-thumb-tack{
@@ -307,7 +478,21 @@ ul.contacts p>span:hover{
 }
 
 .right-items input:focus{
-    width: 320px;
+    border: 1px solid #2C2C2C;
+    animation: stretch 0.3s ease forwards;
+}
+
+@keyframes stretch {
+    from {
+        width: 225px;
+    }
+    to {
+        width: 320px;
+    }
+}
+
+.right-items input:hover{
+    border: 1px solid #2C2C2C;
 }
 
 .fa-cog:hover{
@@ -400,7 +585,8 @@ ul.contacts p>span:hover{
 .main-message .message {
     display: flex;
     justify-content: flex-start;
-    padding: 20px 15px;
+    padding: 10px 15px;
+    position: relative;
 }
 
 .main-message .user-photo>img{
@@ -423,6 +609,65 @@ ul.contacts p>span:hover{
 .msg-head .name:hover{
     cursor: pointer;
     text-decoration: underline;
+}
+
+.message .msg-button{
+    border: 1px solid #717274;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    top: -3px;
+    display: flex;
+    visibility: hidden;
+    color: #717274;
+    background-color: white;
+}
+
+.msg-button .fa-smile-o{
+    padding: 8px 8px 8px 8px;
+    border-right: 1px solid #C0C0C0;
+    font-weight: 700;
+}
+
+.msg-button .fa-smile-o:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.msg-button .fa-commenting-o{
+    padding: 8px 8px 8px 8px;
+    border-right: 1px solid #C0C0C0;
+    font-weight: 700;
+}
+
+.msg-button .fa-commenting-o:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.msg-button .fa-arrow-right{
+    padding: 8px 8px 8px 8px;
+    border-right: 1px solid #C0C0C0;
+    font-weight: 700;
+}
+
+.msg-button .fa-arrow-right:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.msg-button .fa-ellipsis-h{
+    padding: 8px 8px 8px 8px;
+    font-weight: 700;
+}
+
+.msg-button .fa-ellipsis-h:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.message:hover .msg-button{
+     visibility: visible;
 }
 
 .intput-container{
@@ -612,9 +857,38 @@ details[open] > summary::before {
     box-sizing: border-box;
 } 
 
-.details-panel summary:hover{
+/* details {
+    transition: height 1s ease;
+  }
+
+details:not([open]) { height: fit-content; }
+details[open] { height: fit-content; } */
+
+details[open] div{
+    animation: height 0.2s;
+}
+@keyframes height {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.25em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* .details-panel summary:hover{
     opacity: 1;
     cursor: pointer;
+} */
+
+details:not[open] summary{
+    opacity: 0.6;
+}
+
+details[open] summary{
+    opacity: 1;
 }
 
 .channel-details .fa-thumb-tack{
@@ -749,23 +1023,3 @@ details[open] > summary::before {
 .msg-body>p>a:hover{
     text-decoration: underline;
 }
-
-
-
-
-/* summary:after {
-    background: red;
-    border-radius: 5px;
-    content: "+";
-    color: #fff;
-    float: right;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: -5px 10px 0 0;
-    padding: 0;
-    text-align: center;
-    width: 20px;
-}
-details[open] summary:after {
-    content: "-";
-} */
