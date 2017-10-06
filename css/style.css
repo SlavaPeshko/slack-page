@@ -537,7 +537,8 @@ ul.contacts p>span:hover{
 }
 
 .main-message{
-    flex-grow: 2;
+    /* flex-grow: 2; */
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -743,7 +744,8 @@ form.intput-container .input-msg[contentEditable=true]:empty:not(:focus):before 
 }
 
 .details-panel{
-    flex-grow: 0.3;
+    /* flex-grow: 0.3; */
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
